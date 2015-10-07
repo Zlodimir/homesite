@@ -1,6 +1,6 @@
 set :stage,        :production
 set :rails_env,    :production
-set :deploy_to,    '/home/homesite'
+set :deploy_to,    '/home/homesite/homesite'
 set :unicorn_init, '/etc/init.d/net_zlodimir_unicorn'
 
 server 'zlodimir.minidns.net', user: 'homesite', port: 2244, roles: %w{app web db}
