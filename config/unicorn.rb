@@ -1,6 +1,6 @@
 rails_env = ENV['RAILS_ENV'] || 'development'
 
-if rails_env == 'production'
+#if rails_env == 'production'
   APP_PATH = '/home/homesite/homesite'
   worker_processes 2
   timeout 30
@@ -8,7 +8,7 @@ if rails_env == 'production'
 #   APP_PATH = '/home/crafter/ossai'
 #   worker_processes 5
 #   timeout 60
-end
+#end
 
 working_directory APP_PATH + '/current'
 
