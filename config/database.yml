@@ -15,7 +15,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: homesite_production
-  host: zlodimir.minidns.net
+  host: 127.0.0.1
   pool: 5
   username: homesite
   password: mazafaka
