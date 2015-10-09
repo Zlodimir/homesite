@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    meta http-equiv='X-UA-Compatible' content='IE=edge'
+    title Homepage
+    = stylesheet_link_tag 'application', media: 'all'
+    link href='//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'
+    link href='//fonts.googleapis.com/css?family=Cantarell:400,700' rel='stylesheet' type='text/css'
+    = csrf_meta_tags
+
+  body
+
+    .body-wrapper
+      // = render 'shared/contact_modal'
+      // = render 'shared/subscribe_modal'
+      // = render 'shared/distributor_modal'
+      // = render 'shared/legal_modal'
+      // = render 'shared/info_modal'
+
+      .main-content
+        //= render 'shared/menu'
+
+        .content
+          = yield

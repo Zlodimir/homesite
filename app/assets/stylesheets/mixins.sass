@@ -1,0 +1,131 @@
+// media queries in general
+
+=for-phone
+  @media only screen and (max-width: 768px)
+    @content
+
+=for-desktop
+  @media only screen and (min-width: 769px)
+    @content
+
+=screen-from-0-to-768
+  @media only screen and (max-width: 767px)
+    @content
+
+=screen-from-768-to-992
+  @media only screen and (min-width: 768px) and (max-width: 991px)
+    @content
+
+=screen-from-992-to-1200
+  @media only screen and (min-width: 992px) and (max-width: 1199px)
+    @content
+
+=screen-from-1200
+  @media only screen and (min-width: 1200px)
+    @content
+
+=ratio-to-4-3
+  @media only screen and (max-aspect-ratio: 4/3)
+    @content
+
+=ratio-to-16-10
+  @media only screen and (max-aspect-ratio: 16/10)
+    @content
+
+=ratio-from-16-10
+  @media only screen and (min-aspect-ratio: 16/9)
+    @content
+
+=landscape-orientation
+  @media only screen and (min-aspect-ratio: 1/1)
+    @content
+
+// specific media queries
+
+=fit-small-screen
+  @media screen and (max-width: 750px)
+    margin-left: -15px
+    margin-right: -15px
+
+// utilities
+
+=clearfix
+  &:before
+    clear: both
+    content: " "
+    display: table
+  &:after
+    clear: both
+    content: " "
+    display: table
+
+=size($height, $width)
+  height: $height
+  width: $width
+
+=ellipsis
+  max-width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// borders
+
+=right-rounded($radius)
+  border-top-left-radius: 0
+  border-top-right-radius: $radius
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: $radius
+
+=left-rounded($radius)
+  border-top-left-radius: $radius
+  border-top-right-radius: 0
+  border-bottom-left-radius: $radius
+  border-bottom-right-radius: 0
+
+=top-rounded($radius)
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+=bottom-rounded($radius)
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+  border-bottom-left-radius: $radius
+  border-bottom-right-radius: $radius
+
+// retina support
+
+=background-image($image, $size: 100% 100%, $position: center center)
+  background-image: image-url('#{$image}.png')
+  background-repeat: no-repeat
+  background-position: $position
+  background-size: $size
+
+  @media screen and (min--moz-device-pixel-ratio: 1.3)
+    background-image: image-url('#{$image}@2x.png')
+
+  @media screen and (-o-min-device-pixel-ratio: 2.6/2)
+    background-image: image-url('#{$image}@2x.png')
+
+  @media screen and (-webkit-min-device-pixel-ratio: 1.3)
+    background-image: image-url('#{$image}@2x.png')
+
+  @media screen and (min-device-pixel-ratio: 1.3)
+    background-image: image-url('#{$image}@2x.png')
+
+  @media screen and (min-resolution: 1.3dppx)
+    background-image: image-url('#{$image}@2x.png')
+
+=font-styling($color, $family, $size, $height, $weight: normal)
+  color: $color
+  font-family: $family, sans-serif
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
+
+=background-full
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
